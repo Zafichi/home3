@@ -3,9 +3,13 @@ lst2 = [5, 8, 13, 42]
 
 new_lst = []
 for i in lst1:
-    if i in lst2:
+    if lst1[i] == lst2[0]:
         for j in lst2:
-            new_lst.append(j)
+            print(j)
+            ind = i
+            if lst2[j] == lst1[ind]:
+                new_lst.append(j)
+                ind += 1
     if len(new_lst) == len(lst2):
         break
 
